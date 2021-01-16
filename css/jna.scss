@@ -1,0 +1,24 @@
+@mixin d-f ($fd, $jc, $ai) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin reset {
+    margin: 0;   
+    padding: 0;
+    width: 100vh;
+}
+
+@mixin reset1 {
+    margin: 0;   
+    padding: 0;
+    width: 100%;
+}
+
+$bi: (
+    bi1: 12,
+    bi2: 0,
+    bi3: 0,
+);

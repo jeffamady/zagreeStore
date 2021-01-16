@@ -1,0 +1,8 @@
+@import 'jna';
+
+@import 'colors';
+
+body {
+    @include d-f (column, center, center);
+    background-color: map-get($map: $color, $key: a1);
+}
