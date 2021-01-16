@@ -2,7 +2,86 @@
 
 @import 'colors';
 
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 body {
-    @include d-f (column, center, center);
-    background-color: map-get($map: $color, $key: a1);
+    @include  reset;
+    background-color: map-get($map: $color, $key: bg);
+}
+
+header {
+    width: 100vw;
+    height: 3rem;
+    background-color: map-get($map: $color, $key: bgh);
+    display: grid;
+    grid-template-areas:
+        "empty logo empty1 phrase empty3 search empty4 cart empty5 "
+    ;
+    grid-template-rows: 1fr 3fr 10fr 11fr 5fr 7fr 4fr 3fr 2.5fr ;
+
+    .logo {
+        grid-area: logo;
+        width: 3rem;
+        height: 3rem;
+
+        @include d-f (row, center, center)
+        
+        a {
+            text-decoration: none;
+            width: 3rem;
+            &:hover {
+                opacity: 90%;
+            }
+            img {
+                width: 70%;
+            }
+        }
+    }
+
+    .p-zagree {
+        grid-area: phrase;
+
+        font-family: 'Righteous', cursive;
+        font-size: 1.3rem;
+        @include d-f (row, center, center);
+        
+        p {
+            @include reset;
+        }
+    }
+
+    .search-button {
+        grid-area: search;
+        height: 3rem;
+        @include d-f (row, center, center);
+
+        input {
+            // background-color: map-get($map: $color, $key: a1);
+            color: map-get($map: $color, $key: t2);
+            
+        }
+
+        button {
+            background-color: map-get($map: $color, $key: a1);
+            color: map-get($map: $color, $key: t2);
+        }
+    }
+
+    .cart {
+        grid-area: cart;
+        width: 3rem;
+        height: 3rem;
+        @include d-f (row, center, center)
+
+        a {
+            text-decoration: none;
+            &:hover {
+                opacity: 90%;
+            }
+
+            img {
+                width: 70%;
+            }
+        }
+    }
 }

@@ -1,17 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #E5E5E5;
+}
+
+header {
+  width: 100vw;
+  height: 3rem;
+  background-color: #FF8360;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "empty logo empty1 phrase empty3 search empty4 cart empty5 ";
+  -ms-grid-rows: 1fr 3fr 10fr 11fr 5fr 7fr 4fr 3fr 2.5fr;
+      grid-template-rows: 1fr 3fr 10fr 11fr 5fr 7fr 4fr 3fr 2.5fr;
+}
+
+header .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  width: 3rem;
+  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #1B9AAA;
+}
+
+header .logo a {
+  text-decoration: none;
+  width: 3rem;
+}
+
+header .logo a:hover {
+  opacity: 90%;
+}
+
+header .logo a img {
+  width: 70%;
+}
+
+header .p-zagree {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: phrase;
+  font-family: 'Righteous', cursive;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .p-zagree p {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .search-button {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
+  grid-area: search;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .search-button input {
+  color: #B21E35;
+}
+
+header .search-button button {
+  background-color: #BDBF09;
+  color: #B21E35;
+}
+
+header .cart {
+  -ms-grid-row: 1;
+  -ms-grid-column: 8;
+  grid-area: cart;
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .cart a {
+  text-decoration: none;
+}
+
+header .cart a:hover {
+  opacity: 90%;
+}
+
+header .cart a img {
+  width: 70%;
 }
 /*# sourceMappingURL=style.css.map */
